@@ -83,7 +83,6 @@ namespace TshockRemoveRememberedposOnDeath
         {
             if (TShock.Config.RememberLeavePos && args.Player.Dead)
             {
-                TShock.DB.Query("DELETE FROM RememberedPos WHERE Name=@0 AND WorldID=@1;", args.Player.Name, Main.worldID.ToString());
                 try
                 {
                     TShock.DB.Query("DELETE FROM RememberedPos WHERE Name=@0 AND WorldID=@1;", args.Player.Name, Main.worldID.ToString());
